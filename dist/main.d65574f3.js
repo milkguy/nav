@@ -174,11 +174,14 @@ window.onbeforeunload = function () {
 $(document).on('keypress', function (e) {
   var key = e.key;
 
-  for (var i = 0; i < hashMap.length; i++) {
-    if (hashMap[i].logo.toLowerCase() === key) {
-      window.open(hashMap[i].url);
+  if (e.target !== document.querySelector('#input')) {
+    for (var i = 0; i < hashMap.length; i++) {
+      if (hashMap[i].logo.toLowerCase() === key) {
+        window.open(hashMap[i].url);
+      }
     }
   }
 });
+$('#input').on('');
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.2cc380a1.js.map
+//# sourceMappingURL=main.d65574f3.js.map
